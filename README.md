@@ -80,7 +80,7 @@ For detailed info about the logic and usage patterns of bmcclure modules check t
         }
 
 
-## USAGE - bmcclure extensions management 
+## USAGE - example42 extensions management 
 * Activate puppi (recommended, but disabled by default)
 
         class { 'sysstat':

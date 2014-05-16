@@ -14,7 +14,7 @@
     "manifests\\params.pp": "554749500ea7fda0dbd23c152708d5c2",
     "templates\\spec.erb": "95554a191230174b3ba5942f8d8d5b1e",
     "templates\\sysstat.erb": "c3240e6a2ebffd501e59de3031711908",
-    "README.md": "77101cf2753b47c97a536c89f182935b"
+    "README.md": "0972c3f73c53b04ebd6f818ecf458e54"
   },
   "dependencies": [
     {
