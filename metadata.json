@@ -1,0 +1,41 @@
+{
+  "author": "Alessandro Franceschi",
+  "checksums": {
+    "manifests\\init.pp": "3cb68aa89d2c28390df7d2b064b77ded",
+    "Rakefile": "e90d68823ff237c89224eb139f8926ad",
+    "spec\\classes\\sysstat_spec.rb": "909921c9f3ec6d4aea43651092ed693d",
+    "manifests\\spec.pp": "be2739f6e445a91607ba5f0e68a21b1d",
+    "Modulefile": "21c7e33e9e49823c8f2111399e740bcd",
+    "tests\\disable.pp": "8843b492ce0513dc65caba0536d787d4",
+    "tests\\absent.pp": "98df4807b5d63af8c14128aa8145e1f8",
+    "templates\\init.erb": "2c919292a6c9a933a03126681822d875",
+    "spec\\spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "tests\\init.pp": "0270b1c728705d4400e2d76463b7788a",
+    "manifests\\params.pp": "554749500ea7fda0dbd23c152708d5c2",
+    "templates\\spec.erb": "95554a191230174b3ba5942f8d8d5b1e",
+    "templates\\sysstat.erb": "c3240e6a2ebffd501e59de3031711908",
+    "README.md": "77101cf2753b47c97a536c89f182935b"
+  },
+  "dependencies": [
+    {
+      "name": "example42/puppi",
+      "version_requirement": "\u003e\u003d2.0.0"
+    },
+    {
+      "name": "example42/firewall",
+      "version_requirement": "\u003e\u003d2.0.0"
+    },
+    {
+      "name": "example42/monitor",
+      "version_requirement": "\u003e\u003d2.0.0"
+    }
+  ],
+  "description": "This module installs and manages sysstat. Check README for details.",
+  "license": "Apache2",
+  "name": "bmcclure-sysstat",
+  "project_page": "http://www.benmcclure.com",
+  "source": "https://github.com/bmcclure/puppet-sysstat",
+  "summary": "Puppet module for sysstat",
+  "types": [],
+  "version": "2.0.11"
+}

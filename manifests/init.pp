@@ -142,6 +142,7 @@ class sysstat (
   $source_dir          = params_lookup( 'source_dir' ),
   $source_dir_purge    = params_lookup( 'source_dir_purge' ),
   $template            = params_lookup( 'template' ),
+  $init_template       = params_lookup( 'init_template' ),
   $service_autorestart = params_lookup( 'service_autorestart' , 'global' ),
   $options             = params_lookup( 'options' ),
   $version             = params_lookup( 'version' ),
@@ -222,6 +223,11 @@ class sysstat (
     ''        => undef,
     default   => template($sysstat::template),
   }
+  
+  $manage_file_init_content = $sysstat::init_template ? {
+    ''        => undef,
+    default   => template($sysstat::init_template),
+  }
 
   ### Managed resources
   package { $sysstat::package:
@@ -247,6 +253,20 @@ class sysstat (
     notify  => $sysstat::manage_service_autorestart,
     source  => $sysstat::manage_file_source,
     content => $sysstat::manage_file_content,
+    replace => $sysstat::manage_file_replace,
+    audit   => $sysstat::manage_audit,
+    noop    => $sysstat::noops,
+  }
+  
+  file { 'sysstat.init':
+    ensure  => $sysstat::manage_file,
+    path    => $sysstat::config_file_init,
+    mode    => 0644,
+    owner   => 'root',
+    group   => 'root',
+    require => Package[$sysstat::package],
+    notify  => $sysstat::manage_service_autorestart,
+    content => $sysstat::manage_file_init_content,
     replace => $sysstat::manage_file_replace,
     audit   => $sysstat::manage_audit,
     noop    => $sysstat::noops,

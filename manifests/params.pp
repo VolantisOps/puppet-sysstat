@@ -71,6 +71,7 @@ class sysstat::params {
   $source_dir = ''
   $source_dir_purge = false
   $template = 'sysstat/sysstat.erb'
+  $init_template = 'sysstat/init.erb'
   $options = ''
   $service_autorestart = true
   $version = 'present'
